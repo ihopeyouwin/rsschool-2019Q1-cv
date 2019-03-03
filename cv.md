@@ -1,12 +1,14 @@
-Curriculum Vitae
+### **Curriculum Vitae**
 1. Kalinaev Ivan
-2. Contacts : +375447929396(mob.), ihopeyouwin_ship(skype), ihopeyouwon@gmail.com(e-mail)
-3. Summary 
-Programming was always an appropriate thing for me, i liked it when i was at school, but at that moment i did not realize that i can bound my life with it. Now I cant deny my passion to it and I'm going to become a skilled specialist, i went to a retraining couple of mounths ago,
-also I'm studying technologies myself, in addition to this my superiour language skills serve me good, and no matter happens on that JS-course, I will become a skilled specialist that way, or another.
-4. Skills: basic C++ knowledge, MS SQL basics, C#(basics, WFP, LINQ, ADO.NET + EntityFramework), Java(basics)
-5. Code examples;
-public partial class Page3 : Page
+2. **Contacts** : +375447929396(mob.), ihopeyouwin_ship(skype), ihopeyouwon@gmail.com(e-mail)
+3. **Summary**
+Programming was always an appropriate thing for me, i liked it when i was at school, but at that moment i did not realize that i can bound my life with it. 
+Now I cant deny my passion to it and I'm going to become a skilled specialist, i went to a retraining couple of mounths ago, also I'm studying technologies myself, 
+in addition to this my superiour language skills serve me good, and no matter happens on that JS-course, I will become a skilled specialist that way, or another.
+4. **Skills**: basic C++ knowledge, MS SQL basics, C#(basics, WFP, LINQ, ADO.NET + EntityFramework), Java(basics)
+5. **Code examples**
+```C#
+    public partial class Page3 : Page
     {
         CollectionViewSource managersViewSource;
         public Page3()
@@ -52,7 +54,7 @@ public partial class Page3 : Page
             }
         }
     }
-{
+
     public partial class Window1 : Window
     {
         CollectionViewSource win1viewsource;
@@ -106,6 +108,7 @@ public partial class Page3 : Page
         }
     }
 }
-6. Experience: Making a text game in C#, building a calculator, completing tasks within the courses, making an application for the SQL base(C#) to show its contents;
-7. Education: Belarusian State Economic University, Economist, Accounting in Transport. Information Systems Software(c++/C# courses), Javarush free, Codecademy "introduction to HTML" & "Learn CSS" courses
-8. English level: B2(gymnasium #38 with English specialization, english camps(3 times), international sales practice(4 years), winner of the English BaKonkurs competition 2008 (for students of 11th grade in Belarus)
+```
+6. **Experience:** Making a text game in C#, building a calculator, completing tasks within the courses, making an application for the SQL base(C#) to show its contents;
+7. **Education:** Belarusian State Economic University, Economist, Accounting in Transport. Information Systems Software(c++/C# courses), Javarush free, Codecademy "introduction to HTML" & "Learn CSS" courses
+8. **English level:** B2(gymnasium #38 with English specialization, english camps(3 times), international sales practice(4 years), winner of the English BaKonkurs competition 2008 (for students of 11th grade in Belarus)
