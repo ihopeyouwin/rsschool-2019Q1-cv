@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>curriculum-vitae</title>
+</head>
+<body>
+	<h3 id="-curriculum-vitae-"><strong>Curriculum Vitae</strong></h3>
+<ol>
+<li>Kalinaev Ivan</li>
+<li><strong>Contacts</strong> : +375447929396(mob.), ihopeyouwin_ship(skype), ihopeyouwon@gmail.com(e-mail)</li>
+<li><strong>Summary</strong>
+Programming was always an appropriate thing for me, i liked it when i was at school, but at that moment i did not realize that i can bound my life with it. 
+Now I cant deny my passion to it and I&#39;m going to become a skilled specialist, i went to a retraining couple of mounths ago, also I&#39;m studying technologies myself, 
+in addition to this my superiour language skills serve me good, and no matter happens on that JS-course, I will become a skilled specialist that way, or another.</li>
+<li><strong>Skills</strong>: basic C++ knowledge, MS SQL basics, C#(basics, WFP, LINQ, ADO.NET + EntityFramework), Java(basics)</li>
+<li><p><strong>Code examples</strong></p>
+<pre><code class="lang-C#"> <span class="hljs-keyword">public</span> partial <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Page3</span> : <span class="hljs-title">Page</span>
+ </span>{
+     CollectionViewSource managersViewSource;
+     <span class="hljs-keyword">public</span> Page3()
+     {
+         InitializeComponent();
+         managersViewSource = (CollectionViewSource)FindResource(<span class="hljs-string">"managersViewSource"</span>);
+         DataContext = <span class="hljs-built_in">this</span>;
+     }
+     <span class="hljs-keyword">private</span> void Window_Loaded(object sender, RoutedEventArgs e)
+     {
+         App.Context.managers.Load();
+         managersViewSource.Source = App.Context.managers.Local;
+     }
+     <span class="hljs-keyword">private</span> void Btn1_Click(object sender, RoutedEventArgs e)
+     {
+         ManagerAD add = <span class="hljs-keyword">new</span> <span class="hljs-type">ManagerAD</span>();
+         bool? wasAdded = add.ShowDialog();
+         <span class="hljs-keyword">if</span> (wasAdded == <span class="hljs-literal">true</span>)
+         {
+             managersViewSource.View.Refresh();
+         }
+     }
+     <span class="hljs-keyword">private</span> void Btn2_Click(object sender, RoutedEventArgs e)
+     {
+         managers selectedM = managersDataGrid.SelectedItem as managers;
+         MessageBoxResult confirmation = MessageBox.Show(<span class="hljs-string">"Точно нужно удалить этого сотрудника"</span>, <span class="hljs-string">"Внимание!"</span>, MessageBoxButton.YesNo, MessageBoxImage.Question);
+         <span class="hljs-keyword">if</span> (confirmation == MessageBoxResult.Yes)
+         {
+             App.Context.managers.Remove(selectedM);
+             managersViewSource.View.Refresh();
+             App.Context.SaveChanges();
+         }
+     }
+     <span class="hljs-keyword">private</span> void managersDataGrid_MouseDoubleClick(object sender, RoutedEventArgs e)
+     {
+         managers selectedM = managersDataGrid.SelectedItem as managers;
+         Editmanager change = <span class="hljs-keyword">new</span> <span class="hljs-type">Editmanager</span>(selectedM);
+         bool? wasAdded = change.ShowDialog();
+         <span class="hljs-keyword">if</span> (wasAdded == <span class="hljs-literal">true</span>)
+         {
+             managersViewSource.View.Refresh();
+             App.Context.SaveChanges();
+         }
+     }
+ }
+
+ <span class="hljs-keyword">public</span> partial <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Window1</span> : <span class="hljs-title">Window</span>
+ </span>{
+     CollectionViewSource win1viewsource;
+     <span class="hljs-keyword">public</span> Window1()
+     {
+         InitializeComponent();
+         <span class="hljs-built_in">this</span>.win1viewsource = (CollectionViewSource)FindResource(<span class="hljs-string">"ordersViewSource"</span>);
+         DataContext = <span class="hljs-built_in">this</span>;
+     }
+
+     <span class="hljs-keyword">private</span> void Window_Loaded(object sender, RoutedEventArgs e)
+     {
+         App.Context.Switchboard_Items.Load();
+         <span class="hljs-built_in">this</span>.win1viewsource.Source = App.Context.orders.Local;
+         WpfApp1.tryhard1DataSet tryhard1DataSet = ((WpfApp1.tryhard1DataSet)(<span class="hljs-built_in">this</span>.FindResource(<span class="hljs-string">"tryhard1DataSet"</span>)));
+         WpfApp1.tryhard1DataSetTableAdapters.clientsTableAdapter tryhard1DataSetclientsTableAdapter = <span class="hljs-keyword">new</span> <span class="hljs-type">WpfApp1</span>.tryhard1DataSetTableAdapters.clientsTableAdapter();
+         tryhard1DataSetclientsTableAdapter.Fill(tryhard1DataSet.clients);
+         System.Windows.Data.CollectionViewSource clientsViewSource = ((System.Windows.Data.CollectionViewSource)(<span class="hljs-built_in">this</span>.FindResource(<span class="hljs-string">"clientsViewSource"</span>)));
+         WpfApp1.tryhard1DataSetTableAdapters.managersTableAdapter tryhard1DataSetmanagersTableAdapter = <span class="hljs-keyword">new</span> <span class="hljs-type">WpfApp1</span>.tryhard1DataSetTableAdapters.managersTableAdapter();
+         tryhard1DataSetmanagersTableAdapter.Fill(tryhard1DataSet.managers);
+         System.Windows.Data.CollectionViewSource managersViewSource = ((System.Windows.Data.CollectionViewSource)(<span class="hljs-built_in">this</span>.FindResource(<span class="hljs-string">"managersViewSource"</span>)));
+         WpfApp1.tryhard1DataSetTableAdapters.trailersTableAdapter tryhard1DataSettrailersTableAdapter = <span class="hljs-keyword">new</span> <span class="hljs-type">WpfApp1</span>.tryhard1DataSetTableAdapters.trailersTableAdapter();
+         tryhard1DataSettrailersTableAdapter.Fill(tryhard1DataSet.trailers);
+         System.Windows.Data.CollectionViewSource trailersViewSource = ((System.Windows.Data.CollectionViewSource)(<span class="hljs-built_in">this</span>.FindResource(<span class="hljs-string">"trailersViewSource"</span>)));
+     }
+     <span class="hljs-keyword">private</span> void B1_Click(object sender, RoutedEventArgs e)
+     {
+         orders <span class="hljs-keyword">new</span><span class="hljs-type">ord</span> = <span class="hljs-keyword">new</span> <span class="hljs-type">orders</span>();
+         <span class="hljs-keyword">new</span><span class="hljs-type">ord</span>.заказ = заказTextBox.Text;
+         <span class="hljs-keyword">new</span><span class="hljs-type">ord</span>.статус = статусTextBox.Text;
+         <span class="hljs-keyword">new</span><span class="hljs-type">ord</span>.погрузка = погрузкаDatePicker.SelectedDate;
+         <span class="hljs-keyword">new</span><span class="hljs-type">ord</span>.ведущ<span class="hljs-literal">_</span>код = Convert.ToString(ведущ<span class="hljs-literal">_</span>кодComboBox.SelectedItem as managers);
+         <span class="hljs-keyword">new</span><span class="hljs-type">ord</span>.менеджер = Convert.ToString(менедж<span class="hljs-literal">_</span>кодComboBox.SelectedItem as managers);
+         <span class="hljs-keyword">new</span><span class="hljs-type">ord</span>.машина = Convert.ToString(тягач<span class="hljs-literal">_</span>номComboBox.SelectedItem as trailers); 
+         <span class="hljs-keyword">new</span><span class="hljs-type">ord</span>.выгрузка = выгрузкаTextBox.Text;
+         <span class="hljs-keyword">new</span><span class="hljs-type">ord</span>.маршрут = маршрутTextBox.Text;
+         <span class="hljs-keyword">new</span><span class="hljs-type">ord</span>.договор = договорTextBox.Text;
+         <span class="hljs-keyword">new</span><span class="hljs-type">ord</span>.клиент = Convert.ToString(<span class="hljs-literal">_</span>клиент<span class="hljs-literal">_</span>кор_ComboBox.SelectedItem as clients);
+         <span class="hljs-keyword">new</span><span class="hljs-type">ord</span>.тип<span class="hljs-literal">_</span>перевозки = тип<span class="hljs-literal">_</span>перевозкиTextBox.Text;
+         <span class="hljs-keyword">new</span><span class="hljs-type">ord</span>.простой = простойTextBox.Text;
+         <span class="hljs-keyword">new</span><span class="hljs-type">ord</span>.фрахт = float.Parse(фрахтTextBox.Text);
+         App.Context.orders.Add(<span class="hljs-keyword">new</span><span class="hljs-type">ord</span>);
+         App.Context.SaveChanges();
+         <span class="hljs-built_in">this</span>.DialogResult = <span class="hljs-literal">true</span>;
+         <span class="hljs-built_in">this</span>.Close();
+     }
+     <span class="hljs-keyword">private</span> void B2_Click(object sender, RoutedEventArgs e)
+     {
+         <span class="hljs-built_in">this</span>.DialogResult = <span class="hljs-literal">false</span>;
+         <span class="hljs-built_in">this</span>.Close();
+     }
+ }
+}
+</code></pre>
+</li>
+<li><strong>Experience:</strong> Making a text game in C#, building a calculator, completing tasks within the courses, making an application for the SQL base(C#) to show its contents;</li>
+<li><strong>Education:</strong> Belarusian State Economic University, Economist, Accounting in Transport. Information Systems Software(c++/C# courses), Javarush free, Codecademy &quot;introduction to HTML&quot; &amp; &quot;Learn CSS&quot; courses</li>
+<li><strong>English level:</strong> B2(gymnasium #38 with English specialization, english camps(3 times), international sales practice(4 years), winner of the English BaKonkurs competition 2008 (for students of 11th grade in Belarus)</li>
+</ol>
+</body>
+</html>
+<!-- 
+
+
+-->
