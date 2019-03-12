@@ -11,7 +11,7 @@ h1{
 
 	justify-content: center;
 	text-align: center;
-	margin-bottom: 200px;
+	margin-bottom: 20px;
 }
 h3{
 	color: lightblue;
@@ -37,11 +37,10 @@ h3{
 .photo img{
 	width: 108px;
 	height: 162px;
-	justify-content: center;
-	align-items: center;
-	position: absolute;
-	margin-left: 15%;
-	margin-top: 200px
+	display: block;
+	margin: auto;
+	position: relative;
+	right: 100px;
 }
 #footer{
 	height:40px;
@@ -61,4 +60,8 @@ header{
 }
 main{
 	margin-top: 40px;
+}
+.space{
+	display: inline;
+	width: 33%;
 }
