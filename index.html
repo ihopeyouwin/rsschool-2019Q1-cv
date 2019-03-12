@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<!-- styles -->
+	<link rel="stylesheet" href="style.css">
+	<title>curriculum-vitae</title>
+</head>
+<body>
+	<!-- Header-->
+	<header>
+		<h1 id="-curriculum-vitae-"><strong>Curriculum Vitae</strong></h1>
+	</header>
+	<main>
+		<section name="image">
+			<div class="photo"><img src="assets/myface.png" alt="image1"></div>
+		</section>
+		<section name="list">
+			<ol>
+			<li class="sitem">Kalinaev Ivan</li>
+			<li class="sitem"><strong>Contacts</strong> : +375447929396(mob.), ihopeyouwin_ship(skype), ihopeyouwon@gmail.com(e-mail)</li>
+			<li class="sitem"><strong>Summary</strong>
+				Programming was always an appropriate thing for me, i liked it when i was at school, but at that moment i did not realize that i can bound my life with it. 
+				Now I cant deny my passion to it and I&#39;m going to become a skilled specialist, i went to a retraining couple of mounths ago, also I&#39;m studying technologies myself, 
+				in addition to this my superiour language skills serve me good, and no matter happens on that JS-course, I will become a skilled specialist that way, or another.</li>
+			<li class="sitem"><strong>Skills</strong>: basic C++ knowledge, MS SQL basics, C#(basics, WPF, LINQ, ADO.NET + EntityFramework), Java(basics)</li>
+			<li class="sitem"><p><strong>Code examples</strong></p>
+				<pre><code class="lang-gs"> <span class="hljs-keyword">public</span> partial <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Page3</span> : <span class="hljs-title">Page</span>
+ 				</span>{
+					module.exports = function check(str, bracketsConfig) {
+					  global = true;
+					  let a = str;
+					  let b = bracketsConfig;
+					  for ( i=1 ; i < a.length; i++)
+					  {
+					      for(let c = 0; c < bracketsConfig.length; c++ )
+					      {
+					        if (a[i-1] == b[c][0] && a[i] == b[c][1] )
+					        {
+					          a = a.substring( 0, i-1 ) + a.substring ( i+1, a.length);
+					          i = 0;
+					          break;
+					        }
+					      }
+					  }
+					  if ( a.length == 0)
+					  {
+					      global = true;
+					  }
+					  else 
+					  {
+					    global = false;
+					  }
+					  return global;
+					}
+				</code></pre><h3>That was my "brackets task" solution</h3></li>
+
+			<li class="sitem"><strong>Experience:</strong> Making a text game in C#, building a calculator, completing tasks within the courses, making an application for the SQL base(C#) to show its contents;</li>
+			<li class="sitem"><strong>Education:</strong> Belarusian State Economic University, Economist, Accounting in Transport. Information Systems Software(c++/C# courses), Javarush free, Codecademy &quot;introduction to HTML&quot; &amp; &quot;Learn CSS&quot; courses</li>
+			<li class="sitem"><strong>English level:</strong> B2(gymnasium #38 with English specialization, english camps(3 times), international sales practice(4 years), winner of the English BaKonkurs competition 2008 (for students of 11th grade in Belarus)</li>
+		</ol>
+		</section>
+
+		
+	</main>
+	<footer>
+		<div id="footer"></div>
+	</footer>
+
+</body>
+</html>
+<!-- 
+
+
+-->
